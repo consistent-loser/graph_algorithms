@@ -4,8 +4,7 @@ int find(int u,int parent[]){
 	if(parent[u]==-1){
 		return u;
 	}
-	parent[u]=find(parent[u],parent);
-	return parent[u];
+	return find(parent[u],parent);
 }
 void unionn(int src,int dst,int parent[]){
 	int x_set=find(src,parent);
